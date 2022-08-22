@@ -49,14 +49,14 @@ function spin(elem) {
     window.setTimeout(function() {
         let startIcon = document.querySelectorAll('.start')
         startIcon.forEach(item => {
-            item.remove()
+            item.style.display = 'none'
         })
             var icons = [
                 'win1.png','win2.png','win3.png','win4.png','win5.png','win6.png','win7.png','win8.png'
             ];
 
             if(counter === 1){
-                var results = [
+                var results1 = [
                     icons[0],
                     icons[0],
                     icons[0]
@@ -75,8 +75,8 @@ function spin(elem) {
                 var icons2 = col2.querySelectorAll('.icon');
                 var icons3 = col3.querySelectorAll('.icon');
                 for(var x = 0; x < 3; x++) {
-                    icons[x].setAttribute('src', 'img/slots/'+results[x]);
-                    icons[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results[x]);
+                    icons[x].setAttribute('src', 'img/slots/'+results1[x]);
+                    icons[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results1[x]);
                     icons2[x].setAttribute('src', 'img/slots/'+results2[x]);
                     icons2[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results2[x]);
                     icons3[x].setAttribute('src', 'img/slots/'+results3[x]);
@@ -94,7 +94,7 @@ function spin(elem) {
                 }, 3300);
 
             } else {
-                var results = [
+                var results1 = [
                     icons[0],
                     icons[6],
                     icons[5]
@@ -107,8 +107,8 @@ function spin(elem) {
                 var icons = col1.querySelectorAll('.icon');
                 var icons2 = col2.querySelectorAll('.icon');
                 for(var x = 0; x < 3; x++) {
-                    icons[x].setAttribute('src', 'img/slots/'+results[x]);
-                    icons[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results[x]);
+                    icons[x].setAttribute('src', 'img/slots/'+results1[x]);
+                    icons[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results1[x]);
                     icons2[x].setAttribute('src', 'img/slots/'+results2[x]);
                     icons2[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results2[x]);
                 }
