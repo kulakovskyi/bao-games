@@ -13,7 +13,7 @@ for(var i in cols) {
     var col = cols[i];
     var str = '';
     var firstThree = '';
-    for(var x = 0; x < 30; x++) {
+    for(var x = 0; x < 20; x++) {
         var part = '<img class="icon" src="img/slots/'+icons[Math.floor(Math.random()*icons.length)]+'">';
         str += part
         if (x < 3) firstThree += part;
@@ -104,7 +104,6 @@ function spin(elem) {
                     icons[2],
                     icons[2]
                 ]
-
                 var icons = col1.querySelectorAll('.icon');
                 var icons2 = col2.querySelectorAll('.icon');
                 for(var x = 0; x < 3; x++) {
