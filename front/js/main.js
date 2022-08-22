@@ -72,11 +72,14 @@ function spin(elem) {
                     icons[3]
                 ]
                 var icons = col1.querySelectorAll('.icon');
-                var icons2 = col2.querySelectorAll('.icon');
-                var icons3 = col3.querySelectorAll('.icon');
+
                 for(var x = 0; x < 3; x++) {
                     icons[x].setAttribute('src', 'img/slots/'+results1[x]);
                     icons[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results1[x]);
+                }
+                var icons2 = col2.querySelectorAll('.icon');
+                var icons3 = col3.querySelectorAll('.icon');
+                for(var x = 0; x < 3; x++) {
                     icons2[x].setAttribute('src', 'img/slots/'+results2[x]);
                     icons2[(icons.length-3)+x].setAttribute('src', 'img/slots/'+results2[x]);
                     icons3[x].setAttribute('src', 'img/slots/'+results3[x]);
