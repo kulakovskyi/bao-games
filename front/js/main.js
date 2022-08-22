@@ -13,7 +13,7 @@ for(var i in cols) {
     var col = cols[i];
     var str = '';
     var firstThree = '';
-    for(var x = 0; x < 20; x++) {
+    for(var x = 0; x < 30; x++) {
         var part = '<img class="icon" src="img/slots/'+icons[Math.floor(Math.random()*icons.length)]+'">';
         str += part
         if (x < 3) firstThree += part;
