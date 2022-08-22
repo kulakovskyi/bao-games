@@ -27,6 +27,7 @@ body
 
 .bao
   &__overlay
+    padding: 15px
     opacity: 1
     visibility: visible
     position: absolute
@@ -144,6 +145,7 @@ body
       letter-spacing: 0.01em
       text-transform: uppercase
       color: #FAE700
+      white-space: nowrap
   &__text
     font-family: $gilroy-500
     font-size: 29px
@@ -193,11 +195,12 @@ body
     @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
       background: url("../img/slots/casino-mob.png") no-repeat 50% 0/contain
   &__cat
-    width: 333px
-    height: 412px
+    width: 452px
+    height: 457px
     position: absolute
     bottom: -32px
     left: -186px
+    z-index: 2
     @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
       background: url('../img/cat-desc.png') no-repeat 50% 0/contain
     @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
@@ -220,6 +223,8 @@ body
     opacity: 0
     visibility: hidden
     transition: opacity .5s linear, visibility .5s linear
+    br
+      display: none
     &.visible
       visibility: visible
       animation: visible 1s ease
@@ -320,9 +325,9 @@ body
   10%
     filter: blur(0)
   30%
-    filter: blur(6px)
+    filter: blur(1px)
   60%
-    filter: blur(6px)
+    filter: blur(1px)
   80%
     filter: blur(0)
 

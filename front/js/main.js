@@ -91,7 +91,7 @@ function spin(elem) {
                     firstWin.classList.remove('hidden')
                     textMain.innerHTML = 'One attempt left'
 
-                }, 2400);
+                }, 3300);
 
             } else {
                 var results = [
@@ -119,10 +119,8 @@ function spin(elem) {
                 setTimeout(() => {
                     overlay.classList.remove('opacity')
                     secondWin.classList.remove('hidden')
-                }, 2400);
-
+                }, 3300);
             }
-
     }, 1500);
 
 
