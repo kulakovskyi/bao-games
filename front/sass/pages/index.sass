@@ -338,6 +338,7 @@ body
 
 
 .win-fire-blue
+  margin: 8px 5px 0 0
   .flame
     background: linear-gradient(-45deg, #265dd0, #3377a1)
     box-shadow: 17px 20px 90px #0f90be
@@ -345,6 +346,12 @@ body
     &:after,
     &:before
       background: linear-gradient(-45deg, #197def, #137981)
+
+.win-scale,
+.win-scale-blue
+  transition: .3s ease
+  &._add
+    animation: 1s scale infinite
 
 @keyframes flame
   0%
@@ -418,6 +425,15 @@ body
     background: rgba(0, 0, 0, 0)
   100%
     background: rgba(0, 0, 0, 0.6)
+
+@keyframes scale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.03)
+  100%
+    transform: scale(1)
+
 
 
 
