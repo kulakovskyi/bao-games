@@ -64,6 +64,7 @@ function spin(elem) {
         })
         win2.forEach(item => {
             item.style.display = 'block'
+            item.style.transform = 'scaleX(-1) rotate(180deg)'
         })
             var icons = [
                 'win1.png','win2.png','win3.png','win4.png','win5.png','win6.png','win7.png','win8.png'
@@ -122,6 +123,7 @@ function spin(elem) {
 
                 win3.forEach(item => {
                     item.style.display = 'block'
+                    item.style.transform = 'scaleX(-1) rotate(180deg)'
                 })
                 //for ios fox
                 for(var x = 0; x < 9; x++) {
