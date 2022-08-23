@@ -40,9 +40,11 @@ let counter = ''
 btn.addEventListener('click', ()=> {
     spin(this)
     counter++
+    btn.classList.add('pointer-none')
 })
 
 firstWinBtn.addEventListener('click', ()=> {
+    btn.classList.remove('pointer-none')
     overlay.classList.add('opacity')
     firstWin.classList.add('hidden')
     col2.classList.remove('win')
