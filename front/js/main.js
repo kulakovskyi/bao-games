@@ -13,7 +13,7 @@ for(var i in cols) {
     var col = cols[i];
     var str = '';
     var firstThree = '';
-    for(var x = 0; x < 20; x++) {
+    for(var x = 0; x < 30; x++) {
         var part = '<img class="icon" src="img/slots/'+icons[Math.floor(Math.random()*icons.length)]+'">';
         str += part
         if (x < 3) firstThree += part;
@@ -22,7 +22,8 @@ for(var i in cols) {
     col.innerHTML = content + str+firstThree;
 }
 
-
+let win3 = document.querySelectorAll('.start3')
+let win2 = document.querySelectorAll('.start2')
 let overlay = document.querySelector('.bao__overlay')
 let firstWin = document.querySelector('.bao__firstWin')
 let firstWinBtn = document.querySelector('.bao__firstWin-btn')
@@ -50,6 +51,9 @@ function spin(elem) {
         let startIcon = document.querySelectorAll('.start')
         startIcon.forEach(item => {
             item.style.display = 'none'
+        })
+        win2.forEach(item => {
+            item.style.display = 'block'
         })
             var icons = [
                 'win1.png','win2.png','win3.png','win4.png','win5.png','win6.png','win7.png','win8.png'
@@ -93,9 +97,20 @@ function spin(elem) {
                     firstWin.classList.remove('hidden')
                     textMain.innerHTML = 'One attempt left'
 
-                }, 3300);
+                }, 2900);
 
-            } else {
+            }
+            if(counter === 2){
+                win3.forEach(item => {
+                    item.style.display = 'block'
+                })
+                //for ios fox
+                for(var x = 0; x < 3; x++) {
+                    win2[0].setAttribute('src', 'img/slots/win1.png');
+                    win2[1].setAttribute('src', 'img/slots/win7.png');
+                    win2[2].setAttribute('src', 'img/slots/win6.png');
+                }
+
                 var results1 = [
                     icons[0],
                     icons[6],
@@ -106,6 +121,7 @@ function spin(elem) {
                     icons[2],
                     icons[2]
                 ]
+
                 var icons = col1.querySelectorAll('.icon');
                 var icons2 = col2.querySelectorAll('.icon');
                 for(var x = 0; x < 3; x++) {
@@ -120,7 +136,7 @@ function spin(elem) {
                 setTimeout(() => {
                     overlay.classList.remove('opacity')
                     secondWin.classList.remove('hidden')
-                }, 3300);
+                }, 2900);
             }
     }, 1500);
 
