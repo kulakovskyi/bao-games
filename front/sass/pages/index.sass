@@ -237,13 +237,18 @@ body
     overflow: hidden
     top: 56.089%
     left: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) scaleX(-1) rotate(180deg)
+    transform-origin: center
     height: 587px
     width: 614px
     padding: 0 3px
     display: flex
     justify-content: center
     align-items: flex-start
+
+    img
+      transform-origin: center
+      transform: scaleX(-1) rotate(180deg)
 
   .outer-col
     width: 33%
@@ -350,8 +355,10 @@ body
 .win-scale,
 .win-scale-blue
   transition: .3s ease
+
   &._add
     animation: 1s scale infinite
+    transform: scaleX(-1) rotate(180deg) !important
 
 @keyframes flame
   0%
