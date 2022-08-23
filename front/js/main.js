@@ -31,6 +31,8 @@ let secondWin = document.querySelector('.bao__secondWin')
 let textMain = document.querySelector('.bao__text')
 let textWin = document.querySelector('.bao__textWin')
 let btn = document.querySelector('.bao__btn')
+let firstwinAnim = document.querySelector('.win-fire')
+let secondwinAnim = document.querySelector('.win-fire-blue')
 let counter = ''
 
 btn.addEventListener('click', ()=> {
@@ -43,6 +45,7 @@ firstWinBtn.addEventListener('click', ()=> {
     firstWin.classList.add('hidden')
     col2.classList.remove('win')
     col3.classList.remove('win')
+    firstwinAnim.classList.remove('_add')
 })
 
 function spin(elem) {
@@ -93,6 +96,11 @@ function spin(elem) {
                 col3.classList.add('win')
                 textWin.classList.add('visible')
                 setTimeout(() => {
+                    firstwinAnim.classList.add('_add')
+                }, 1500)
+
+
+                setTimeout(() => {
                     overlay.classList.remove('opacity')
                     firstWin.classList.remove('hidden')
                     textMain.innerHTML = 'One attempt left'
@@ -101,6 +109,7 @@ function spin(elem) {
 
             }
             if(counter === 2){
+
                 win3.forEach(item => {
                     item.style.display = 'block'
                 })
@@ -133,6 +142,10 @@ function spin(elem) {
 
                 col1.classList.add('win')
                 col3.classList.add('win')
+                setTimeout(() => {
+                    secondwinAnim.classList.add('_add')
+                }, 1500)
+
                 setTimeout(() => {
                     overlay.classList.remove('opacity')
                     secondWin.classList.remove('hidden')
