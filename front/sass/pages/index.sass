@@ -355,7 +355,7 @@ body
 .win-scale,
 .win-scale-blue
   transition: .3s ease
-  transform: scaleX(-1) rotate(180deg) !important
+  //transform: scaleX(-1) rotate(180deg) !important
 
   &._add
     animation: 1s scale infinite
@@ -439,11 +439,11 @@ body
 
 @keyframes scale
   0%
-    transform: scale(1)
+    transform: scale(-1, 1) rotate(180deg)
   50%
-    transform: scale(1.03)
+    transform: scale(-1.03, 1.03) rotate(180deg)
   100%
-    transform: scale(1)
+    transform: scale(-1, 1) rotate(180deg)
 
 
 
