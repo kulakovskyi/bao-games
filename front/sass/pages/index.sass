@@ -355,10 +355,11 @@ body
 .win-scale,
 .win-scale-blue
   transition: .3s ease
+  transform: scaleX(-1) rotate(180deg) !important
 
   &._add
     animation: 1s scale infinite
-    transform: scaleX(-1) rotate(180deg) !important
+
 
 @keyframes flame
   0%
